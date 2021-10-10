@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/classic.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="css/styles.css"
+			media="print"
+			onload="this.media='all'"
+		/>
+		<link rel="stylesheet" href="css/normalize.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Elite Gradients - Home</title>
+	</head>
+	<body
+		onload="document.documentElement.style.setProperty('--gradient-direction', 'right');
+		document.documentElement.style.setProperty('--gradient-color-one', '#FF0000');
+		document.documentElement.style.setProperty('--gradient-color-two', '#000000');"
+	>
+		<section class="hero-section grid grid-2x1-hero-section">
+			<div
+				class="gradient-container"
+				id="gradient-container"
+				style="
+					background: #ff0000;
+					background: -webkit-linear-gradient(right, #ff0000, #000000);
+					background: -moz-linear-gradient(right, #ff0000, #000000);
+					background: linear-gradient(to right, #ff0000, #000000);
+				"
+			></div>
+			<div class="gradient-picker-container grid grid-3x3-gradient-picker">
+				<div class="hidden"></div>
+				<h1 class="gradient-picker-title">Elite Gradients</h1>
+				<div class="hidden"></div>
+				<div class="color-one">
+					<label for="" class="color-picker-one-label">Color 1</label>
+					<div class="color-picker-one"></div>
+				</div>
+				<div class="gradient-gradient-direction-container grid grid-3x3">
+					<div class="hidden"></div>
+					<button
+						onclick="DirectionButtonOnClick('top');"
+						class="gradient-direction-top-button"
+					>
+						Top
+					</button>
+					<div class="hidden"></div>
+					<button
+						onclick="DirectionButtonOnClick('left');"
+						class="gradient-direction-left-button"
+					>
+						Left
+					</button>
+					<label for="" class="gradient-direction-label">Direction</label>
+					<button
+						onclick="DirectionButtonOnClick('right');"
+						class="gradient-direction-right-button button-selected"
+					>
+						Right
+					</button>
+					<div class="hidden"></div>
+					<button
+						onclick="DirectionButtonOnClick('bottom');"
+						class="gradient-direction-bottom-button"
+					>
+						Bottom
+					</button>
+					<div class="hidden"></div>
+				</div>
+				<div class="copy-css-button-container">
+					<button
+						onclick="CopyCSSButtonOnClick();"
+						class="copy-css-button"
+						id="copy-css-button"
+					>
+						Copy CSS
+					</button>
+				</div>
+				<div class="color-two">
+					<label for="" class="color-picker-two-label">Color 2</label>
+					<div class="color-picker-two"></div>
+				</div>
+				<div class="hidden"></div>
+				<div class="css-code-container">
+					<p class="css-code" id="css-code">
+						background: #FF0000;<br />background: -webkit-linear-gradient(right,
+						#FF0000, #000000);<br />background: -moz-linear-gradient(right,
+						#FF0000, #000000);<br />background: linear-gradient(to right,
+						#FF0000, #000000);
+					</p>
+				</div>
+			</div>
+		</section>
+		<script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
+		<script src="main.js"></script>
+	</body>
+</html>
